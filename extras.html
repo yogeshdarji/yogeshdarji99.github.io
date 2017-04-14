@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<meta name="description" content="Yogesh's homepage" />
+ 	<meta name="keywords" content="HTML5, CSS" />
+	<title>Extras</title>
+	<link rel="stylesheet" type="text/css" href="css/firststyle.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+</head>
+<body bgcolor="#E6E6FA">
+
+<div class="row">
+	<div class="col-sm-12" style="background-color:lavender;">	
+	<div id="header">
+
+		<div id="nav"><a href="index.html">HOME</a> | <a href="education.html">EDUCATION</a> | <a href="academics.html">ACADEMICS</a> | <a href="resume.html">RESUME</a> | <a href="experience.html">EXPERIENCE</a>| <a href="interests.html">INTERESTS</a>| <a href="contact.html">CONTACT</a> | <a href="extras.html">EXTRAS</a></div>
+
+	
+	</div>
+	</div>
+
+
+<article>
+<header>
+	<h1>EXTRAS</h1>
+	<nav class="links">
+		<a href="https://www.linkedin.com/in/yogeshdarji">LinkedIn</a> | 
+		<a href="http://devpost.com/yogesh_darji99">DevPost</a> | 
+		<a href="https://github.com/yogeshdarji99">Github</a> |
+		<a href="http://stackoverflow.com/users/4883694/yogesh-darji">Stack Overflow</a> | 
+		<a href="https://www.facebook.com/yogeshdarji99">Facebook</a>
+
+	</nav>
+</header>
+
+<br>
+<br>
+
+<div class="spacings">
+	<aside>
+	<figure>
+	<img src="images/Prize.jpg" alt="HackRice Prize Winner" width="380" height="300">
+	<figcaption>Fig 1. Winning Mechanical Keyboard at HackRice</figcaption>
+	</figure>
+	</aside>
+
+<br>
+<br>
+
+<p><b>Places I Travelled in 2015 - 2016</b></p>
+<p>Click on any location to know more about it!</p>
+<figure>
+
+	<img src="images/places1.jpg" border="0" width="800" height="431" usemap="#placesTravelled"/>
+	<map name="placesTravelled" id="">
+		
+		<area id="lasvegas" alt="lasvegas" title="lasvegas" href="https://en.wikipedia.org/wiki/Las_Vegas" shape="rect" 
+		coords="150,8,360,207" style="outline:none;" target="_self"></area>
+
+		<area id="dallas" alt="dallas" title="dallas" href="https://en.wikipedia.org/wiki/Dallas" shape="rect" 
+		coords="400,8,750,207" style="outline:none;" target="_self"></area>
+
+		<area id="mumbai" alt="mumbai" title="mumbai" href="https://en.wikipedia.org/wiki/Mumbai" shape="rect" 
+		coords="150,225,360,440" style="outline:none;" target="_self"></area>
+
+		<area id="houstan" alt="houstan" title="houstan" href="https://en.wikipedia.org/wiki/Houstan" shape="rect" 
+		coords="400,225,750,440" style="outline:none;" target="_self"></area>
+
+	</map>
+
+</figure>
+
+<br>
+<br>
+
+<dl>
+		  		<dt><b>Co-Founder : </b> <i>Mindworkz Infotech</i></dt>
+		  		</br>
+		  		<dd>
+				A digital market research startup with a team of 4 in undergraduate.
+		</br>We used to develop Android Apps and creative websites.
+		</br>Implemented algorithm for shortest path detection on Google Maps for Andriod app.
+				</dd>
+</dl>
+
+<br>
+<br>
+
+
+<table id="collapse">
+			<colgroup>
+			<col style="width: 200px">
+			<col style="width: 200px">
+			<col style="width: 200px">
+			</colgroup>
+			  <tr>
+			    <th colspan="3"><p align="center">Subjects</p></th>
+			  </tr>
+			  <tr>
+			    <td id="color_cell">Web Programming Languages</td>
+			    <td>Prof. Mithun Balakrishna</td>
+			    <td>Tues/Thurs</td>
+			  </tr>
+			  <tr>
+			    <td id="color_cell">Implementation of Data Structures and Algorithms</td>
+			    <td>Prof. Balaji Raghavachari</td>
+			    <td>Tues/Thurs</td>
+			  </tr>
+			  <tr>
+			    <td id="color_cell">Software Defined Network</td>
+			    <td>Prof. Timothy Culver</td>
+			    <td>Mon/Wed</td>
+			  </tr>
+			</table>		
+
+
+<br>
+<br>
+
+
+<div class="List" id="hobb">
+<p>Below are my Hobbies:</p>
+	<ol>
+		<li>Programming</li>
+		<li>Music</li>
+		<li>Tennis</li>
+	</ol>
+</div>
+
+<br>
+<br>
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<p><b>Sachin is always on the top!!! Place Sachin in the upper box:</b></p>
+
+<div id="drop1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<img class="img" id="drag1" src="images/sachin.jpg" draggable="true" ondragstart="drag(event)" />
+
+
+<br>
+<br>
+
+
+
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "Your Click Count : " + localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
+<div id="storage">
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+</div>
+
+<br>
+<br>
+
+
+
+<script type="text/javascript">
+	
+		function submitForm() {
+	    	var doNothing = document.getElementById("myForm");
+
+		}
+
+	    function resetForm() {
+
+	    	document.getElementById("myForm").reset();
+		}
+</script>
+
+
+
+
+
+
+<p>Click the button to get your coordinates.</p>
+<button onclick="getLocation()">Try It</button>
+<p id="demo"></p>
+
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	
+}
+</script>
+<br>
+<br>
+
+<p><b>Please give your feedback:</b></p>
+
+<form action="" method="post" id="myForm">
+
+	Name<sup>*</sup>: <input required type="text" name="fname" placeholder="Enter Full name" />  
+
+	<br>
+	<br>
+
+	Email<sup>*</sup>: <input required type="email" name="email" placeholder="Enter your Email id" />
+
+	<br>
+	<br>
+
+	Birthday:<input type="date" name="bday">
+
+	<br>
+	<br>
+
+	Telephone #<sup>*</sup>:<input type="tel" required name="usertel" placeholder="Enter 10 digits phone" />
+
+	<br>
+	<br>
+
+	 <input type="checkbox" id="purple"/>
+	 <label for="purple">Connect via phone</label>
+	  			
+	 </br>
+	 </br>
+
+	 Select Browser:<input list="browsers">
+<datalist id="browsers">
+<option value="Internet Explorer"> <option value="Firefox">
+<option value="Chrome">
+<option value="Opera">
+<option value="Safari">
+</datalist>
+	  
+	  </br>
+	  </br>
+
+	 Favourite Color: <input type="radio" name="color" value="mediumpurple"/> Purple
+	  				  <input type="radio" name="color" value="lightgreen"/> Green
+	  				  <input type="radio" name="color" value="lightblue" /> Blue
+	  			
+	  </br>
+	  </br>
+	  			
+
+	  Satisfaction Level(Only between 1 to 5): <input type="number" name="satisfaction" min="1" max="5"/>
+	  			</br>
+	  			</br>
+
+	  			
+
+
+
+	  			 <input required type="submit" name="submit" id="submit" value="Done">&nbsp <input type="button" onclick="resetForm()" value="Reset">
+	  			</br>
+	  			</br>
+
+</form>
+
+
+<a href="part2.html">Click here for Assignment part 2</a>
+
+
+
+<br>
+<br>
+
+
+
+
+</div>
+
+
+
+</article>
+
+<footer id="footer">
+<p>© Copyright 2016, Yogesh Darji</p>
+<p><time datetime="2016-02-14"></time></p>
+</footer>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
